@@ -1,0 +1,8 @@
+{
+  "name": "Rezostar Corporation V1.0.2",
+  "description": "Attempt to make the navbar transparent",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
