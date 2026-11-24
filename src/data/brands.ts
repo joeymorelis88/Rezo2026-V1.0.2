@@ -27,6 +27,14 @@ export const HEALTHCARE_BRANDS: BrandItem[] = [
     description: 'Dependable hospital and clinic consumables formulated for everyday institutional care.',
   },
   {
+    name: 'Glomed',
+    slug: 'glomed',
+    category: 'healthcare',
+    origin: 'International',
+    tagline: 'Disposable medical examination gloves & clinical supplies',
+    description: 'Reliable medical-grade disposable gloves and clinical protective consumables for hospitals, clinics, and laboratories.',
+  },
+  {
     name: 'Great Glove',
     slug: 'great-glove',
     category: 'healthcare',

@@ -92,6 +92,7 @@ const BRAND_LOGO_MAP: Record<string, string> = {
   chandanalepa: '/assets/aistudio/Chandanalepa_975ed527.jpg',
   cocomi: '/assets/aistudio/Cocomi_Bio_b7e01b6c.jpg',
   'dr-johns': '/assets/aistudio/DrJohnsHealthySweets_29169c46.jpg',
+  glomed: '/assets/aistudio/Glomed_-_Logo_6d1e4e21.png',
   'great-glove': '/assets/aistudio/Great_Glove_-_Logo_970bf1e6.jpg',
   'hcd-homecare': '/assets/aistudio/HCD_-_Logo_ff17ee7f.jpg',
   'mount-hagen': '/assets/aistudio/Mount_Hagen_-Logo_4ffbfbe8.jfif',

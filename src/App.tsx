@@ -25,70 +25,10 @@ interface CarouselBrandTile {
 
 const CAROUSEL_TILES: CarouselBrandTile[] = [
   {
-    slug: 'auromere',
-    name: 'Auromere',
-    category: 'wellness',
-    logoSrc: '/assets/aistudio/Auromere_899fede4.jpg',
-  },
-  {
-    slug: 'badger',
-    name: 'Badger',
-    category: 'wellness',
-    logoSrc: '/assets/aistudio/Badger_7514e900.jpg',
-  },
-  {
-    slug: 'carlson',
-    name: 'Carlson',
-    category: 'wellness',
-    logoSrc: '/assets/aistudio/Carlson_Logo_70f5ad6e.jpg',
-  },
-  {
-    slug: 'cocomi',
-    name: 'Cocomi',
-    category: 'wellness',
-    logoSrc: '/assets/aistudio/Cocomi_Bio_b7e01b6c.jpg',
-  },
-  {
-    slug: 'dr-johns',
-    name: "Dr. John's",
-    category: 'wellness',
-    logoSrc: '/assets/aistudio/DrJohnsHealthySweets_29169c46.jpg',
-  },
-  {
-    slug: 'chandanalepa',
-    name: 'Chandanalepa',
-    category: 'wellness',
-    logoSrc: '/assets/aistudio/Chandanalepa_975ed527.jpg',
-  },
-  {
     slug: 'bragg',
     name: 'Bragg',
     category: 'wellness',
     logoSrc: '/assets/aistudio/Bragg_-_Logo_364856ce.jpg',
-  },
-  {
-    slug: 'axe-brand',
-    name: 'Axe Brand',
-    category: 'wellness',
-    logoSrc: '/assets/aistudio/Axe_Brand_-_Logo_d1a0d76e.png',
-  },
-  {
-    slug: 'great-glove',
-    name: 'Great Glove',
-    category: 'healthcare',
-    logoSrc: '/assets/aistudio/Great_Glove_-_Logo_970bf1e6.jpg',
-  },
-  {
-    slug: 'hcd-homecare',
-    name: 'HCD Homecare Department',
-    category: 'healthcare',
-    logoSrc: '/assets/aistudio/HCD_-_Logo_ff17ee7f.jpg',
-  },
-  {
-    slug: 'mount-hagen',
-    name: 'Mount Hagen',
-    category: 'wellness',
-    logoSrc: '/assets/aistudio/Mount_Hagen_-Logo_4ffbfbe8.jfif',
   },
   {
     slug: 'sensav',
@@ -97,10 +37,46 @@ const CAROUSEL_TILES: CarouselBrandTile[] = [
     logoSrc: '/assets/aistudio/SensaV_logo_b23f1185.jpg',
   },
   {
+    slug: 'axe-brand',
+    name: 'Axe Brand',
+    category: 'wellness',
+    logoSrc: '/assets/aistudio/Axe_Brand_-_Logo_d1a0d76e.png',
+  },
+  {
+    slug: 'mount-hagen',
+    name: 'Mount Hagen',
+    category: 'wellness',
+    logoSrc: '/assets/aistudio/Mount_Hagen_-Logo_4ffbfbe8.jfif',
+  },
+  {
+    slug: 'great-glove',
+    name: 'Great Glove',
+    category: 'healthcare',
+    logoSrc: '/assets/aistudio/Great_Glove_-_Logo_970bf1e6.jpg',
+  },
+  {
     slug: 'starshots-coffee',
     name: 'Starshots Coffee',
     category: 'wellness',
     logoSrc: '/assets/aistudio/Starshots_Coffee_-_Logo_04cae2e1.jpg',
+  },
+  {
+    slug: 'hcd-homecare',
+    name: 'HCD Homecare Department',
+    category: 'healthcare',
+    logoSrc: '/assets/aistudio/HCD_-_Logo_ff17ee7f.jpg',
+  },
+  {
+    slug: 'glomed',
+    name: 'Glomed',
+    category: 'healthcare',
+    logoSrc: '/assets/aistudio/Glomed_-_Logo_6d1e4e21.png',
+  },
+  {
+    slug: 'nova-wellness',
+    name: 'Nova Wellness Store',
+    category: 'wellness',
+    logoSrc: '/assets/aistudio/Nova_Wellness_Store_Logo_8da77941.png',
   },
 ];
 
@@ -1039,7 +1015,11 @@ export default function App() {
                     <button
                       key={tile.slug}
                       type="button"
-                      onClick={() => openBrandPage(tile.slug)}
+                      onClick={() =>
+                        tile.slug === 'nova-wellness'
+                          ? setNovaChannelsOpen(true)
+                          : openBrandPage(tile.slug)
+                      }
                       style={{ flex: `0 0 ${100 / visibleTiles}%` }}
                       className="flex min-h-[82px] items-center justify-center px-3 py-2 transition-transform hover:-translate-y-0.5"
                       title={`Explore ${tile.name}`}
@@ -1048,7 +1028,7 @@ export default function App() {
                         src={tile.logoSrc}
                         alt={`${tile.name} logo`}
                         referrerPolicy="no-referrer"
-                        className="max-h-[54px] max-w-[145px] w-auto rounded-[3px] object-contain"
+                        className="max-h-[60px] max-w-[145px] w-auto rounded-[3px] object-contain"
                       />
                     </button>
                   ))}

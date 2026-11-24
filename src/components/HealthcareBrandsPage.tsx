@@ -72,6 +72,7 @@ const FEATURED_SPEC: Array<{
 ];
 
 const HEALTHCARE_LOGO_MAP: Record<string, string> = {
+  glomed: '/assets/aistudio/Glomed_-_Logo_6d1e4e21.png',
   'great-glove': '/assets/aistudio/Great_Glove_-_Logo_970bf1e6.jpg',
   'hcd-homecare': '/assets/aistudio/HCD_-_Logo_ff17ee7f.jpg',
 };
